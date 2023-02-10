@@ -1,0 +1,1 @@
+I'm going to make a shopping cart that will be linked to a database of products and when a product is added to the cart, the number of products in the database will decrease.
