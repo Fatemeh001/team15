@@ -6,7 +6,7 @@
     <h2> Sign up here to be the first one to know about our exclusive deals! </h2>
 
     <div class="signup-form" >
-        <form action="login.inc.php" method="post">
+        <form action="includes\login.inc.php" method="post">
 
     
 
