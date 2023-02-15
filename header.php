@@ -35,7 +35,7 @@
             <li><a id="Tops" href="tops.php">Tops</a></li>
             <li><a id="Sale" href="sale.php">Sale</a></li>>
             <li><a id="Tops" href="signup.php">Sign up</a></li>
-            <li><a id="Sale" href="sale.php">Login</a></li>>
+            <li><a id="Sale" href="login.php">Login</a></li>>
           </ul>
         </div>
 
