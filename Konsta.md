@@ -1,6 +1,6 @@
 PHP MySQL Login system
 
----Registration system  <Fateme will take care of this>
+---Registration system  
 
 1. Database table
 
