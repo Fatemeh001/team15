@@ -16,6 +16,9 @@
             
             <button type="submit" name="submit">Login</button>
 
+            <a href="adminlogin.php">Admin</a>
+
+
 
         </form>
     </div>
