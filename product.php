@@ -5,7 +5,7 @@ include "header.php";
 <?php
 include 'db.php';
 if (isset($_POST['add_product'])) {
-  
+    $id = $_POST['id'];
     $name = $_POST['name'];
     $description = $_POST['description'];
     $inventory_id = $_POST['inventory_id'];
