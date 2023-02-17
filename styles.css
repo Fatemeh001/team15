@@ -5,10 +5,6 @@ body {
   margin: 16px auto;
 }
 
-
-
-
-  
 ul.horizontal-list {
   list-style: none;
   display: table;
@@ -25,7 +21,7 @@ ul.horizontal-list li {
 }
 
 .line-divider {
-  width: 60%;
+  width: 45%;
   height: 2px;
   background-color: #ccc;
   margin: 20px auto;
@@ -74,64 +70,44 @@ h1{
       
     }
 
-    .bg-image:hover .text-white h1 {
+    .bg-image .text-white h1 {
       display: block;
     }
-
+  
     .text-white h1 {
       display: none;
     }
-
-    
-    
-    
-
-    
+  
+  
     .card {
-      background-color: red;
-    }
-   
-  
-    .card-img-top{
-      float: right;
-      width: 20vh;
-      height: auto;
-     
-    }
-  
-    .card-title{
-     
-      text-align: left;
-      font-size: 48px;
-      padding-top: 40px;
-      width: 70vh;
-      
-       
-    }
-    .card-text{
-      font-size: 30px;
-      padding-top: 90px;
-      color:rgb(189, 72, 59);
-      width: 20vh;
-      
-    }
-
-    .bg-image:hover {
-      transform: scale(1.1);
-      transition: all 0.5s ease;
+      background-color: rgb(248, 150, 150);
     }
     
+      .card-title{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 50px;
+        height: 105px;
+        width: 598px;
+        padding-top: 30px;
+        
+         
+      }
+      .card-text{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 30px;
+        color:rgb(189, 72, 59);
+        
+      }
+  
+     .card-body{
+      margin: 0 auto;
+     }
   
    
     
   
-
-/*
-.container {
-      width:80%;
-      max-width:860px;
-  }
-*/
 
 .popular{
   font-size: 30px;
@@ -187,8 +163,9 @@ h1{
 
 
 .product-grid{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   text-align: center;
+  padding-bottom: 30px;
 }
 .product-grid .product-image{
   overflow: hidden;
@@ -204,18 +181,18 @@ h1{
 
 .product-grid:hover .product-links{ right: 10px; }
 .product-grid .product-links li a{
-  color: #333;
+  color: rgb(133, 26, 26);
   background: transparent;
   font-size: 17px;
   line-height: 38px;
   width: 38px;
   height: 38px;
-  border: 1px solid #333;
+  border: 1px solid rgb(133, 26, 26);
   border-bottom: none;
   display: block;
   transition: all 0.3s;
 }
-.product-grid .product-links li:last-child a{ border-bottom: 1px solid #333; }
+.product-grid .product-links li:last-child a{ border-bottom: 1px solid rgb(133, 26, 26); }
 .product-grid .product-links li a:hover{
   color: #fff;
   background: #333;
@@ -247,17 +224,18 @@ h1{
   margin: 0 0 7px;
 }
 .product-grid .title a{
-  color: #777;
+  color: rgb(133, 26, 26);
   transition: all 0.3s ease 0s;
 }
-.product-grid .title a:hover{ color: #a5ba8d; }
+.product-grid .title a:hover{ color: #e88673; }
 .product-grid .price{
   color: #0d0d0d;
   font-size: 14px;
   font-weight: 600;
 }
 .product-grid .price span{
-  color: #888;
+  margin-left: 20px;
+  color: rgb(101, 62, 44);
   font-size: 13px;
   font-weight: 400;
   text-decoration: line-through;
@@ -268,22 +246,55 @@ h1{
 
 
 
+.logo-404 img{
+  margin-top: 30px;
+  height: 50px;
+  width: auto;
+}
 
+.content-404 h1 {
+  color: #363432;
+  font-family: 'Roboto', sans-serif;
+  font-size: 41px;
+  font-weight: 300;
+}
+
+.content-404 img {
+ margin:0 auto;
+ height: 200px;
+ width: auto;
+}
+
+.content-404 p {
+  color: #363432;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
+
+.content-404  h2 {
+  margin-top:50px;
+}
+
+.content-404 h2 a {
+  background: #ffe9e1;
+  color: #ad5a4b;
+  font-family: 'Roboto', sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  padding: 8px 40px;
+}
 
 
 
 
 
 footer {
+
   background-color: #ffe8e0;
   background-position-x: 100px;
   text-align: center ;
   align-items: center;
   margin: 0 auto;
-  width: 70%; 
-  margin: 0 auto; 
-  text-align: center; 
-  margin-top: 26px;
 }
 
 .footer-widget .container {
@@ -292,7 +303,7 @@ footer {
 
 .single-widget h2 {
   color: #3d3a38;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 16px;
@@ -302,7 +313,7 @@ footer {
 
 .single-widget ul li a{
     color: #3d3a38;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'BIZ UDPGothic', sans-serif;
     font-size: 16px;
     font-weight: 300;
     padding: 0px 0;
@@ -320,7 +331,7 @@ footer {
 
 .footer-bottom p {
   color: #3d3a38;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'BIZ UDPGothic', sans-serif;
   font-weight: 300;
   background: #f8d3c5;
   margin-left: 140px;
@@ -333,8 +344,6 @@ footer {
  width: auto; 
  margin-right: 120px;
 }
-
-
 
 @media only screen and (max-width: 420px) {
   .bg-image {

@@ -1,5 +1,4 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Cecile | Home</title>
@@ -9,19 +8,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="styles.css">
-  <style>
-  a, .nav-link,.navbar-brand {
-    color: black;
-}
-    </style>
+
 </head>
 <body>
-<div class="container" >
-    <div class="row">
-  <nav class="navbar navbar-expand-lg" style="background-color: white" >
-  <div class="container-fluid">
-   
-
 
     <header>
         <div class="container">
