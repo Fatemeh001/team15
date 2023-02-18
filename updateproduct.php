@@ -3,7 +3,7 @@ $title = "Update your product's info";
 include "header.php";
 if (isset($_POST['update_product'])) {
   
-    $id = $_POST['product?_id'];
+    $product_id = $_POST['product_id'];
     $name = $_POST['name'];
     $description = $_POST['description'];
     $inventory_id = $_POST['inventory_id'];
@@ -22,11 +22,11 @@ if (isset($_POST['update_product'])) {
 
 if (isset($_POST['delete_product'])) {
   
-    $id = $_POST['id'];
+    $product_id = $_POST['product_id'];
     $deleted_at = date("Y-m-d H:i:s");
 
     
-    $sql = "UPDATE product SET deleted_at='$deleted_at' WHERE id=$id";
+    $sql = "UPDATE product SET deleted_at='$deleted_at' WHERE product_id=$product_id";
     if (mysqli_query($conn, $sql)) {
         echo "Product deleted successfully.";
     } else {
@@ -39,7 +39,7 @@ $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
-        echo "Product Name: " . $row["name"]. " - Description: " . $row["description"]. " - Inventory ID: " . $row["inventory_id"]. " - Price: " . $row["price"]. " - Quantity: " . $row["quantity"]. " <a href='edit_product.php?id=" . $row["id"] . "'>Edit</a> <a href='delete_product.php?id=" . $row["id"] . "'>Delete</a><br>";
+        echo "Product Name: " . $row["name"]. " - Description: " . $row["description"]. " - Inventory ID: " . $row["inventory_id"]. " - Price: " . $row["price"]. " - Quantity: " . $row["quantity"];
     }
 } else {
     echo "No products found.";
