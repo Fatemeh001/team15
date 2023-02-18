@@ -24,7 +24,7 @@ if (isset($_POST['update_product'])) {
 mysqli_close($conn);
 ?>
 
-<form action="" method="post">
+<form action="" method="post" style="margin-left:35px ;">
     <input type="text" name="product_id" placeholder="Product ID">
     <input type="text" name="name" placeholder="Name">
     <input type="text" name="description" placeholder="Description"><br><br>

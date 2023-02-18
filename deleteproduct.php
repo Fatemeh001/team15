@@ -20,7 +20,7 @@ if (isset($_POST['delete_product'])) {
 mysqli_close($conn);
 ?>
 
-<form action="" method="post">
+<form action="" method="post" style="margin-left:35px ;">
     <input type="text" name="product_id" placeholder="Product ID">
     <input type="submit" name="delete_product" value="Delete Product">
 </form>
