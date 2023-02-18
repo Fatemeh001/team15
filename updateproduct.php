@@ -1,4 +1,7 @@
 <?php
+include "header.php";
+?>
+<?php
 include 'db.php';
 
 if (isset($_POST['update_product'])) {
@@ -30,3 +33,7 @@ mysqli_close($conn);
     <input type="text" name="quantity" placeholder="Quantity">
     <input type="submit" name="update_product" value="Update Product">
 </form>
+<?php
+include "footer.php";
+?>
+
