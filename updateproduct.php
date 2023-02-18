@@ -21,7 +21,7 @@ if (isset($_POST['update_product'])) {
 }
 
 if (isset($_POST['delete_product'])) {
-  a
+  
     $id = $_POST['id'];
     $deleted_at = date("Y-m-d H:i:s");
 
