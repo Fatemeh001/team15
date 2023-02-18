@@ -1,18 +1,15 @@
 <?php
-$servername="db";
-$username="cecile";
+$servename="db";
+$username="team15";
 $password="password";
-$dbname="users";
+$dbname="team15";
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-
+$conn = new mysqli($servename,$username,$password, $dbname);
 if($conn->connect_error){
     die("connection faild:" . $conn->connect_error);
 }
 
 
 ?>
-
 
