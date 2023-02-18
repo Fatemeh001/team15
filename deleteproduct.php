@@ -14,6 +14,16 @@ if (isset($_POST['delete_product'])) {
         echo "Error deleting product: " . mysqli_error($conn);
     }
 }
+mysqli_close($conn);
+?>
 
+<form action="" method="post">
+    <input type="text" name="product_id" placeholder="Product ID">
+    <input type="submit" name="delete_product" value="Delete Product">
+</form>
+
+<?php
+include "footer.php";
+?>
 
 
