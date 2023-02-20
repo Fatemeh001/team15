@@ -35,9 +35,11 @@
           </ul>
           <div class="navbar-nav mb-2 mb-lg-0 cart">
               <div class="header-meta d-flex clearfix justify-content-end">
+                <!--User btn -->
                 <div class="user-login-info">
                     <a href="signup.php"><img src="images/Icons/user.png" alt="login"></a>
                 </div>
+                <!--Cart btn -->
                 <div class="cart-area">
                     <a href="#" id="essenceCartBtn"><img src="images/Icons/Shoppingcart.png" alt="cart"> </a>
                 </div>
@@ -47,6 +49,8 @@
       </div>
     </nav>
   </header>
+
+   <!-- Ride side cart area -->
 
   <div class="cart-bg-overlay"></div>
 
