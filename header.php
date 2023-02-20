@@ -32,20 +32,14 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="sale.php">Sale</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="signup.php">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="login.php">Login</a>
-            </li>
           </ul>
           <div class="navbar-nav mb-2 mb-lg-0 cart">
               <div class="header-meta d-flex clearfix justify-content-end">
-                <div class="cart-area">
-                    <a href="#" id="essenceCartBtn"><img src="images/Icons/Shoppingcart.png" alt="cart"> </a>
-                </div>
                 <div class="user-login-info">
                     <a href="signup.php"><img src="images/Icons/user.png" alt="login"></a>
+                </div>
+                <div class="cart-area">
+                    <a href="#" id="essenceCartBtn"><img src="images/Icons/Shoppingcart.png" alt="cart"> </a>
                 </div>
               </div>
           </div>
