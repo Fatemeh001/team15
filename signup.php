@@ -17,6 +17,7 @@
             <input type="password" name="pwd" placeholder="Password"> <br>
             <input type="password" name="pwdrepeat" placeholder="Repeat password"> <br>
             <button type="submit" name="submit">Sign up</button>
+            <a class="login" href="login.php">Sign In</a>
 
 
         </form>

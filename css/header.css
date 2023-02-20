@@ -9,6 +9,7 @@
 header {
     background-color: #f8d4c6;
     margin-top: -16px;
+   
 }
 
 .header_area .classy-nav-container .classy-navbar-toggler {
@@ -28,18 +29,25 @@ img {
     line-height: 80px; 
     margin-right: -20px;}
     @media only screen and (max-width: 767px) {
-      .cart-area a {
+        .user-login-info a .cart-area a {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50px;
         flex: 0 0 50px;
         width: 50px;
         line-height: 40px; } }
     .cart-area a img {
-      max-width: 20px; }
-    .cart-area a span {
+      max-width: 20px;
+      margin-left: -15px; }
+    .user-login-info a  img {
+      max-width: 20px;
+      margin-top: 29px;
+      margin-left: 15px;
+      margin-right: 10px;
+     }
+      .user-login-info a .cart-area a span {
       font-family: "Ubuntu", sans-serif;
       font-size: 18px;
-      color: #0315ff;
+      color: black;
       font-weight: 700;
       position: absolute;
       top: -10px; }
@@ -270,12 +278,12 @@ img {
           font-weight: 700;
           font-family: "Ubuntu", sans-serif; }
       @media only screen and (max-width: 767px) {
-        .right-side-cart-area .cart-content .cart-amount-summary .essence-btn {
+        .right-side-cart-area .cart-content .cart-amount-summary .cecile-btn {
           min-width: 140px;
           width: 140px;
           padding: 0 15px; } }
 
-          .essence-btn {
+          .cecile-btn {
             display: inline-block;
             min-width: 170px;
             height: 50px;
@@ -289,6 +297,6 @@ img {
             background-color: #f8d4c6;
             letter-spacing: 1.5px;
             font-weight: 600; }
-            .essence-btn:hover, .essence-btn:focus {
+            .cecile-btn:hover, .cecile-btn:focus {
               color: #ffffff;
               background-color: #c88266; }

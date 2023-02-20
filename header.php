@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="icon" href="images/1.png" type="image/x-icon">
 
+
 </head>
 
 <body>
@@ -38,15 +39,16 @@
               <a class="nav-link active" aria-current="page" href="login.php">Login</a>
             </li>
           </ul>
-          <ul class="navbar-nav mb-2 mb-lg-0 cart">
-            <li class="nav-item">
+          <div class="navbar-nav mb-2 mb-lg-0 cart">
               <div class="header-meta d-flex clearfix justify-content-end">
                 <div class="cart-area">
                     <a href="#" id="essenceCartBtn"><img src="images/Icons/Shoppingcart.png" alt="cart"> </a>
                 </div>
+                <div class="user-login-info">
+                    <a href="signup.php"><img src="images/Icons/user.png" alt="login"></a>
+                </div>
               </div>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -125,7 +127,7 @@
                     <li><span>total:</span> <span>0.00€</span></li>
                 </ul>
                 <div class="checkout-btn mt-100">
-                    <a href="checkout.html" class="btn essence-btn">check out</a>
+                    <a href="checkout.html" class="btn cecile-btn">check out</a>
                 </div>
             </div>
         </div>
