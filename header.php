@@ -121,7 +121,7 @@
                     <li><span>total:</span> <span>0.00€</span></li>
                 </ul>
                 <div class="checkout-btn mt-100">
-                    <a href="checkout.html" class="btn cecile-btn">check out</a>
+                    <a href="checkout.php" class="btn cecile-btn">check out</a>
                 </div>
             </div>
         </div>

@@ -41,7 +41,7 @@
 
 
             <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-4" style="float: left;  margin-left: 100px;"  >
+              <div class="col-lg-4 col-md-3 col-sm-4" style="float: left;  margin-left: 190px;"  >
                   <div class="product-grid">
                       <div class="product-image">
 
@@ -60,7 +60,7 @@
                   </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-sm-4" style="float: right;  margin-right: 100px;" >
+              <div class="col-lg-4 col-md-3 col-sm-4" style="float: right;  margin-right: 100px;" >
                 <div class="product-grid">
                     <div class="product-image">
                         <a href="405.php" class="image">
