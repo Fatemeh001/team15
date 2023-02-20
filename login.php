@@ -10,13 +10,13 @@
 
     
 
-            <input type="text" name="fname" placeholder="Email"> <br>
+            <input type="text" name="fname" placeholder="Email" required style="margin-bottom: 5px;"> <br>
           
-            <input type="password" name="pwd" placeholder="Password"> <br>
+            <input type="password" name="pwd" placeholder="Password" required style="margin-bottom: 5px;"> <br>
             
-            <button type="submit" name="submit">Login</button>
+            <button type="submit" name="submit" style="background-color: #f8d4c6; border-color: #f8d4c6;">Login</button>
 
-            <a href="adminlogin.php">Admin</a>
+            <a href="adminlogin.php" style="margin-left: 10px;">Admin</a>
 
 
 

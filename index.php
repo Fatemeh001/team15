@@ -3,7 +3,7 @@
 
 
       
-          <div class="p-5 text-center bg-image rounded-3" style="background-image: url('images/banner2.jpg');height: 600px;  background-repeat: no-repeat;">
+          <div class="p-5 text-center bg-image rounded-3" style="background-image: url('images/banner2.jpg');height: 600px;  background-repeat: no-repeat; margin-top: 50px">
         <div class="mask" style="background-color: #ffe8e0d5">
           <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
@@ -15,30 +15,9 @@
           </div>
         </div>
   </div>
-
-            
-
-
-
-
-  
-
-
-
-
               <div class="popular" style=" padding-top: 78px; padding-bottom: 46px;">
                 <p>Popular Products</p>
               </div>
-
-
-            
-
-
-
-
-      
-            
-
 
             <div class="row">
               <div class="col-lg-4 col-md-3 col-sm-4" style="float: left;  margin-left: 190px;"  >

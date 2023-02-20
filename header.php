@@ -64,12 +64,12 @@
                 <!-- Single Cart Item -->
                 <div class="single-cart-item">
                     <a href="#" class="product-image">
-                        <img src="images/model7.png" class="cart-thumb" alt="">
+                        <img src="images/model5.png" class="cart-thumb" alt="">
                         <!-- Cart Item Desc -->
                         <div class="cart-item-desc">
                           <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
                             <span class="badge"></span>
-                            <h6>Sweater</h6>
+                            <h6>Jacket</h6>
                             <p class="size">Size: S</p>
                             <p class="color">Color: White</p>
                             <p class="price">70.00€</p>
@@ -80,12 +80,12 @@
                 <!-- Single Cart Item -->
                 <div class="single-cart-item">
                     <a href="#" class="product-image">
-                        <img src="images/model7.png" class="cart-thumb" alt="">
+                        <img src="images/model6.png" class="cart-thumb" alt="">
                         <!-- Cart Item Desc -->
                         <div class="cart-item-desc">
                           <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
                           <span class="badge"></span>
-                            <h6>Sweater</h6>
+                            <h6>Hoodie</h6>
                             <p class="size">Size: S</p>
                             <p class="color">Color: White</p>
                             <p class="price">70.00€</p>
@@ -115,9 +115,9 @@
 
                 <h2>Summary</h2>
                 <ul class="summary-table">
-                    <li><span>subtotal:</span> <span>0.00€</span></li>
+                    <li><span>subtotal:</span> <span>210.00€</span></li>
                     <li><span>delivery:</span> <span>Free</span></li>
-                    <li><span>discount:</span> <span>%</span></li>
+                    <li><span>discount:</span> <span>-100%</span></li>
                     <li><span>total:</span> <span>0.00€</span></li>
                 </ul>
                 <div class="checkout-btn mt-100">
