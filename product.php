@@ -1,7 +1,5 @@
-
-<?php
-include "header.php";
-?>
+<?php include "header.php";
+$title = "Cecile | Product";?>
 <?php
 include 'db.php';
 if (isset($_POST['add_product'])) {

@@ -1,4 +1,5 @@
-<?php include "header.php" ?>
+<?php include "header.php";
+$title = "Cecile | Login";?>
 
 
 
@@ -23,21 +24,6 @@
         </form>
     </div>
 </section>    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

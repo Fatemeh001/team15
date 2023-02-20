@@ -1,4 +1,5 @@
-<?php include "header.php" ?>
+<?php include "header.php";
+$title = "Cecile | Tops";?>
 
   <div class="container">
 
@@ -68,10 +69,5 @@
         
           </div>
           
-
-
-
-
-    </header>
 
     <?php include "footer.php" ?>

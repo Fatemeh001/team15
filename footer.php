@@ -1,13 +1,3 @@
-</div>
-    
-</div>
-
-</div>
-
-
-
-</header>
-
 <footer> 
   <div class="footer-widget">
   <div class="container">
