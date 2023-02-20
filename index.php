@@ -1,4 +1,5 @@
-<?php include "header.php" ?>
+<?php include "header.php";
+$title = "Cecile | Home";?>
 <div class="container">
 
 
@@ -16,29 +17,9 @@
         </div>
   </div>
 
-            
-
-
-
-
-  
-
-
-
-
               <div class="popular" style=" padding-top: 78px; padding-bottom: 46px;">
                 <p>Popular Products</p>
               </div>
-
-
-            
-
-
-
-
-      
-            
-
 
             <div class="row">
               <div class="col-lg-4 col-md-6 col-sm-4" style="float: left;  margin-left: 100px;"  >
@@ -82,12 +63,6 @@
             </div>
         
           </div>
-          
-
-
-
-
-    </header>
 
 
     <?php include "footer.php" ?>
