@@ -11,13 +11,13 @@
 
     
 
-            <input type="text" name="fname" placeholder="First name"> <br>
-            <input type="text" name="lname" placeholder="Last name"> <br>
-            <input type="text" name="email" placeholder="Email address"> <br>
-            <input type="password" name="pwd" placeholder="Password"> <br>
-            <input type="password" name="pwdrepeat" placeholder="Repeat password"> <br>
-            <button type="submit" name="submit">Sign up</button>
-            <a class="login" href="login.php">Sign In</a>
+            <input type="text" name="fname" placeholder="First name" required style="margin-bottom: 5px;"> <br>
+            <input type="text" name="lname" placeholder="Last name" required style="margin-bottom: 5px;"> <br>
+            <input type="text" name="email" placeholder="Email address" required style="margin-bottom: 5px;"> <br>
+            <input type="password" name="pwd" placeholder="Password" required style="margin-bottom: 5px;"> <br>
+            <input type="password" name="pwdrepeat" placeholder="Repeat password" required style="margin-bottom: 5px;"> <br>
+            <button type="submit" name="submit" style="background-color: #f8d4c6; border-color: #f8d4c6;">Sign up</button>
+            <a class="login" href="login.php" style="margin-left: 10px; ">Sign In</a>
 
 
         </form>
