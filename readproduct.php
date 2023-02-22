@@ -13,7 +13,7 @@ if($result->num_rows > 0){
         while($row = $result ->fetch_assoc()){
             echo" 
         <tr> 
-        <td><a href='updateproduct.php?id=$row[id]'>$row[id]</a></td>
+        <td><a href='updateproduct.php?product_id=$row[product_id]'>$row[product_id]</a></td>
         <td>$row[name]</td>
         <td>$row[description]</td>
         <td>$row[inventory_id]</td>
