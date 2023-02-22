@@ -1,6 +1,15 @@
 <?php include "header.php";
 $title = "Cecile | Feedback";?>
 
+<style>
+    .feedback-form{
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+    }
+    </style>
+
+
 <section class="submit-feedback">
 
 <?php
@@ -36,15 +45,19 @@ if (empty($_POST["email"])) {
 
     <!-- if (user is loged in) {they can submit feedback}-->
     <!-- else {ask user to login or sign up}-->
+
+    <div class="feedback-form">
     <h2> Submit your feedback </h2>
     <p><span class="error">* required field</span></p>
 
-    <div class="feedback-form" >
-        <form action="includes\signup.inc.php" method="post">
+
+        <form action="feedbackThanks.php" method="post">
             
-            <input type="text" name="email" placeholder="Email address" value="Enter your email address"> <br>
+        E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+        <span class="error">* <?php echo $emailErr;?></span><br>
 
             <h3>How satisfied are you with the buying process?</h3>
+            <!-- Make a table -->
             <p> 5 = Highly satisfied</p>
             <p> 4 = Satisfied</p>
             <p> 3 = Neutral</p>
