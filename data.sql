@@ -4,7 +4,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 20, 2023 at 09:22 AM
+-- Generation Time: Feb 22, 2023 at 09:24 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.19
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `team15`
 --
-CREATE DATABASE IF NOT EXISTS `team15` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `team15`;
 
 -- --------------------------------------------------------
 
@@ -125,6 +123,26 @@ CREATE TABLE `user` (
 --
 
 --
+-- Indexes for table `cart_list`
+--
+ALTER TABLE `cart_list`
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Indexes for table `favourite_list`
+--
+ALTER TABLE `favourite_list`
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
+
+--
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indexes for table `order`
 --
 ALTER TABLE `order`
@@ -163,6 +181,30 @@ ALTER TABLE `product`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `cart_list`
+--
+ALTER TABLE `cart_list`
+  ADD CONSTRAINT `cart_list_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `cart_list_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Constraints for table `favourite_list`
+--
+ALTER TABLE `favourite_list`
+  ADD CONSTRAINT `favourite_list_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `favourite_list_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Constraints for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
