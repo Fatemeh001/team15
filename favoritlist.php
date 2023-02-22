@@ -26,8 +26,8 @@ mysqli_close($conn);
 ?>
 <form action="" method="post">
     <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="description" placeholder="Description"><br><br>
+    <input type="hidden" name="price"  value="<?php echo $price; ?>">
+    <input type="submit" name="add_favorit'" placeholder="Description"><br><br>
 </form>
 
 
