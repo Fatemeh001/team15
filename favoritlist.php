@@ -31,7 +31,9 @@ mysqli_close($conn);
 </form>
 
 
-
+<?php
+function renderForm($product_id,$price)
+?>
 
 <?php include "footer.php";
 ?>
