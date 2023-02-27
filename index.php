@@ -56,7 +56,7 @@ $title = "Cecile | Home";?>
                     </div>
                     <div class="product-content">
                         <h3 class="title"><a href="405.php">Sweater</a></h3>
-                        <div class="price">49.00€ <span>70.00€</span></div>
+                        <div class="price" href="favoritlist.php">49.00€ <span>70.00€</span></div>
                         
                     </div>
                 </div>
