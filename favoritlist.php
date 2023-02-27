@@ -20,8 +20,8 @@ if (isset($_POST['add_favorit'])) {
 }
 mysqli_close($conn);
 ?>
-<form action="" method="post">
+<form action="" method="post" style="padding-top:10px;">
     <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-    <input type="hidden" name="price"  value="<?php echo $price; ?>"><br><br>
     <input type="submit" name="add_favorit" value="Add to favorit List">
+    <input type="hidden" name="price"  value="<?php echo $price; ?>">
 </form>
