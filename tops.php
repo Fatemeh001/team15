@@ -42,6 +42,7 @@ $title = "Cecile | Tops";?>
                       <div class="product-content">
                           <h3 class="title"><a href="405.php">Hoodie</a></h3>
                           <div class="price">60.00€</div>
+                          <button onclick="addToFavoriteList(<?php echo $product_id; ?>" style="margin-top:8px;")>Add to favorite list</button>
                       </div>
                   </div>
               </div>
@@ -62,6 +63,7 @@ $title = "Cecile | Tops";?>
                     <div class="product-content">
                         <h3 class="title"><a href="405.php">Sweater</a></h3>
                         <div class="price">49.00€ <span>70.00€</span></div>
+                        <button onclick="addToFavoriteList(<?php echo $product_id; ?>" style="margin-top:8px;")>Add to favorite list</button>
                         
                     </div>
                 </div>
