@@ -59,7 +59,7 @@ if (isset($_POST['unliked'])) {
                       <div class="product-content">
                       <?php
 $product_id = 1; 
-$result = mysqli_query($conn,"SELECT * FROM fatemeh_fatemeh_product WHERE id=1");
+$result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=1");
 $row= mysqli_fetch_array($result);
 ?>
                       <?php echo $row['name']; ?>
@@ -67,7 +67,7 @@ $row= mysqli_fetch_array($result);
                           <li class="nav-item">
                           <span class="like-container">
                           <?php
-        $result = mysqli_query($conn, "SELECT * FROM likes WHERE user_id = 1 AND product_id=1");
+        $result = mysqli_query($conn, "SELECT * FROM fatemeh-likes WHERE user_id = 1 AND product_id=1");
         if(mysqli_num_rows($result) == 1){?>
             <span> <a href="" class="unlike" id="<?php echo 1 ; ?>">unlike</a></span>
         <?php } else { ?>
