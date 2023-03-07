@@ -22,7 +22,7 @@
           <ul class="horizontal-list">
             <li><a id="Tops" href="tops.php">Tops</a></li>
             <li><a id="Sale" href="sale.php">Sale</a></li>
-            <li><a id="Tops" href="signup.php">Sign up</a></li>
+            <li><a id="Tops" href="signup.php">Newsletter</a></li>
             <li><a id="Sale" href="login.php">Login</a></li>
             <li><a id="Sale" href="feedback.php">Send Feedback</a></li>
           </ul>

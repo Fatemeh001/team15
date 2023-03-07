@@ -77,8 +77,8 @@ include "header.php"; ?>
         </div>
         <div class="box">
           <div class="right-side">
-            <div class="box-topic">Total Profit</div>
-            <div class="number">0</div>
+          <a href="subscribersRead.php">Total newsletter subscribers</a>
+            
             <div class="indicator">
               
               <span class="text">No changes</span>
