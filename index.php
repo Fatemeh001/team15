@@ -65,4 +65,10 @@ $row= mysqli_fetch_array($result);
                           <div class="price" href="unlike.php">60.00€</div>
                           <li class="nav-item">
                           <span class="like-container">
-                          
+                          <?php
+        $result = mysqli_query($conn, "SELECT * FROM likes WHERE user_id = 1 AND product_id=1");
+        if(mysqli_num_rows($result) == 1){?>
+            <span> <a href="" class="unlike" id="<?php echo 1 ; ?>">unlike</a></span>
+        <?php } else { ?>
+            <span> <a href="" class="like" id="<?php echo 1  ?>">like</a></span>
+        <?php }?>
