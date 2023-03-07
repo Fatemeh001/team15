@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 22, 2023 at 09:24 PM
--- Server version: 8.0.31
+-- Generation Time: Mar 07, 2023 at 12:33 PM
+-- Server version: 8.0.30
 -- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cart_list`
+-- Table structure for table `evgeny_cart_list`
 --
 
 CREATE TABLE `evgeny_cart_list` (
@@ -38,7 +38,19 @@ CREATE TABLE `evgeny_cart_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `favourite_list`
+-- Table structure for table `fatemeh-likes`
+--
+
+CREATE TABLE `fatemeh-likes` (
+  `product_id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fatemeh_favourite_list`
 --
 
 CREATE TABLE `fatemeh_favourite_list` (
@@ -47,26 +59,6 @@ CREATE TABLE `fatemeh_favourite_list` (
   `product_id` int NOT NULL,
   `price` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `marika_feedback`
---
-
-CREATE TABLE `marika_feedback` (
-  `email` varchar(50) NOT NULL,
-  `rating` int NOT NULL,
-  `feedbackText` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `marika_feedback`
---
-
-INSERT INTO `marika_feedback` (`email`, `rating`, `feedbackText`) VALUES
-('awdaw@gmail.com', 5, 'Text'),
-('knsefn@mail.com', 4, 'Good!!!!');
 
 -- --------------------------------------------------------
 
@@ -102,7 +94,7 @@ CREATE TABLE `fatemeh_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `product`
+-- Dumping data for table `fatemeh_product`
 --
 
 INSERT INTO `fatemeh_product` (`product_id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`) VALUES
@@ -112,7 +104,7 @@ INSERT INTO `fatemeh_product` (`product_id`, `name`, `description`, `inventory_i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `konsta_user`
 --
 
 CREATE TABLE `konsta_user` (
@@ -124,6 +116,26 @@ CREATE TABLE `konsta_user` (
   `lname` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `marika_feedback`
+--
+
+CREATE TABLE `marika_feedback` (
+  `email` varchar(50) NOT NULL,
+  `rating` int NOT NULL,
+  `feedbackText` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `marika_feedback`
+--
+
+INSERT INTO `marika_feedback` (`email`, `rating`, `feedbackText`) VALUES
+('awdaw@gmail.com', 5, 'Text'),
+('knsefn@mail.com', 4, 'Good!!!!');
 
 --
 -- Indexes for dumped tables
@@ -137,163 +149,30 @@ ALTER TABLE `evgeny_cart_list`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `favourite_list`
+-- Indexes for table `fatemeh-likes`
+--
+ALTER TABLE `fatemeh-likes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `product_id` (`product_id`,`user_id`);
+
+--
+-- Indexes for table `fatemeh_favourite_list`
 --
 ALTER TABLE `fatemeh_favourite_list`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `feedback`
---
-ALTER TABLE `marika_feedback`
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `order`
---
-ALTER TABLE `fatemeh_order`
-  ADD PRIMARY KEY (`order_nmb`);
-
---
--- Indexes for table `product`
---
-ALTER TABLE `fatemeh_product`
-  ADD PRIMARY KEY (`product_id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `konsta_user`
-  ADD PRIMARY KEY (`user_id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `order`
+-- AUTO_INCREMENT for table `fatemeh-likes`
 --
-ALTER TABLE `fatemeh_order`
-  MODIFY `order_nmb` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `product`
---
-ALTER TABLE `fatemeh_product`
-  MODIFY `product_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `konsta_user`
-  MODIFY `user_id` int NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `cart_list`
---
-ALTER TABLE `evgeny_cart_list`
-  ADD CONSTRAINT `cart_list_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `cart_list_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
---
--- Constraints for table `favourite_list`
---
-ALTER TABLE `fatemeh_favourite_list`
-  ADD CONSTRAINT `favourite_list_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `favourite_list_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
---
--- Constraints for table `feedback`
---
-ALTER TABLE `marika_feedback`
-  ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `fatemeh-likes`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
--- Rakenne taululle `konsta_adminusers`
---
-
-CREATE TABLE `konsta_adminusers` (
-  `userid` int NOT NULL,
-  `password` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Vedos taulusta `konsta_adminusers`
---
-
-INSERT INTO `konsta_adminusers` (`userid`, `password`) VALUES
-(130399, 'test1');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `konsta_adminusers`
---
-ALTER TABLE `konsta_adminusers`
-  ADD PRIMARY KEY (`userid`);
-COMMIT;
-
-
-
-
-- Table structure for table `fatemeh-likes`
---
-
-CREATE TABLE `fatemeh-likes` (
-  `id` int NOT NULL,
-  `user_id` int NOT NULL,
-  `product_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `likes`
---
-ALTER TABLE `fatemeh-likes`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_id` (`product_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `likes`
---
-ALTER TABLE `fatemeh-likes`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `likes`
---
-ALTER TABLE `fatemeh-likes`
-  ADD CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-
