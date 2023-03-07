@@ -36,3 +36,15 @@ if (isset($_POST['unliked'])) {
                <h1 class="mb-3 " style="padding-top: 16px; padding-bottom: 16px;">Wear clothes that make you be yourself</h1>
 
             </div>
+            </div>
+        </div>
+  </div>
+
+              <div class="popular" style=" padding-top: 78px; padding-bottom: 46px;">
+                <p>Popular Products</p>
+              </div>
+
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-4" style="float: left;  margin-left: 100px;"  >
+                  <div class="product-grid">
+                      <div class="product-image">
