@@ -100,4 +100,37 @@ $row= mysqli_fetch_array($result);
                         <div class="price" href="unlike.php">49.00€ <span>70.00€</span></div>
                         <li class="nav-item">
                          <span class="like-container">
+                         <?php
+        $result = mysqli_query($conn, "SELECT * FROM likes WHERE user_id = 1 AND product_id=2");
+        if(mysqli_num_rows($result) == 1){?>
+            <span> <a href="" class="unlike" id="<?php echo 2 ; ?>">unlike</a></span>
+        <?php } else { ?>
+            <span> <a href="" class="like" id="<?php echo 2  ?>">like</a></span>
+        <?php }?>
+        </div>
+                </div>
+                
+
+                
+            </div>
+
+            
+        
+          </div>
+          
+</div>
+
+<script type="text/javascript" src="min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.like').click(function(){
+            var product_id = $(this).attr('id');
+            $.ajax({
+                url: 'index.php',
+                type: 'post',
+                async: false,
+                data:{
+                    'liked':1,
+                    'product_id': product_id
+                },
                         
