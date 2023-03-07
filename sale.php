@@ -20,10 +20,17 @@ include "header.php";
 
 
 
-
 <div class="row">
 
     <div class="product-grid">
+      <style>
+        .product-grid{
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          height: auto;
+        }
+      </style>
         <div class="product-image">
             <a href="405.php" class="image">
                 <img src="images/model4.10.png" alt="modelfour">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 07, 2023 at 12:33 PM
+-- Generation Time: Mar 07, 2023 at 12:44 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.0.19
 
@@ -50,19 +50,6 @@ CREATE TABLE `fatemeh-likes` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fatemeh_favourite_list`
---
-
-CREATE TABLE `fatemeh_favourite_list` (
-  `user_id` int NOT NULL,
-  `in_the_flist` tinyint(1) NOT NULL,
-  `product_id` int NOT NULL,
-  `price` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `fatemeh_order`
 --
 
@@ -82,7 +69,7 @@ CREATE TABLE `fatemeh_order` (
 --
 
 CREATE TABLE `fatemeh_product` (
-  `product_id` int NOT NULL,
+  `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` varchar(200) NOT NULL,
   `inventory_id` int NOT NULL,
@@ -97,7 +84,7 @@ CREATE TABLE `fatemeh_product` (
 -- Dumping data for table `fatemeh_product`
 --
 
-INSERT INTO `fatemeh_product` (`product_id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`) VALUES
+INSERT INTO `fatemeh_product` (`id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`) VALUES
 (1, 'hoodie', 'good', 1, 60, '2023-02-15 00:16:58', '2023-02-18 22:13:02', '2023-02-15 00:16:58', 5),
 (2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0);
 
@@ -108,7 +95,7 @@ INSERT INTO `fatemeh_product` (`product_id`, `name`, `description`, `inventory_i
 --
 
 CREATE TABLE `konsta_user` (
-  `user_id` int NOT NULL,
+  `id` int NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -154,13 +141,6 @@ ALTER TABLE `evgeny_cart_list`
 ALTER TABLE `fatemeh-likes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `product_id` (`product_id`,`user_id`);
-
---
--- Indexes for table `fatemeh_favourite_list`
---
-ALTER TABLE `fatemeh_favourite_list`
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `product_id` (`product_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
