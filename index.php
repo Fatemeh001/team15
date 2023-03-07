@@ -88,4 +88,16 @@ $row= mysqli_fetch_array($result);
                             <img src="images/model4.3.png" alt="Sweater">
 
                         </a>
+                        <a href="404.php" class="add-to-cart">OUT OF STOCK</a>
+                    </div>
+                    <div class="product-content">
+                    <?php
+$product_id = 2; // The product ID you want to display
+$result = mysqli_query($conn,"SELECT * FROM product WHERE id=2");
+$row= mysqli_fetch_array($result);
+?>
+                      <?php echo $row['name']; ?>
+                        <div class="price" href="unlike.php">49.00€ <span>70.00€</span></div>
+                        <li class="nav-item">
+                         <span class="like-container">
                         
