@@ -1,4 +1,3 @@
-// fatemeh Ajam
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
@@ -28,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `cart_list`
 --
 
-CREATE TABLE `cart_list` (
+CREATE TABLE `evgeny_cart_list` (
   `user_id` int NOT NULL,
   `in_the_clist` tinyint(1) NOT NULL,
   `product_id` int NOT NULL,
@@ -42,7 +41,7 @@ CREATE TABLE `cart_list` (
 -- Table structure for table `favourite_list`
 --
 
-CREATE TABLE `favourite_list` (
+CREATE TABLE `fatemeh_favourite_list` (
   `user_id` int NOT NULL,
   `in_the_flist` tinyint(1) NOT NULL,
   `product_id` int NOT NULL,
@@ -52,7 +51,7 @@ CREATE TABLE `favourite_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedbackNew`
+-- Table structure for table `marika_feedback`
 --
 
 CREATE TABLE `marika_feedback` (
@@ -72,10 +71,10 @@ INSERT INTO `marika_feedback` (`email`, `rating`, `feedbackText`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order`
+-- Table structure for table `fatemeh_order`
 --
 
-CREATE TABLE `order` (
+CREATE TABLE `fatemeh_order` (
   `order_nmb` int NOT NULL,
   `USER_ID` int NOT NULL,
   `prodact_id` int NOT NULL,
@@ -87,10 +86,10 @@ CREATE TABLE `order` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Table structure for table `fatemeh_product`
 --
 
-CREATE TABLE `product` (
+CREATE TABLE `fatemeh_product` (
   `product_id` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` varchar(200) NOT NULL,
@@ -106,7 +105,7 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`product_id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`) VALUES
+INSERT INTO `fatemeh_product` (`product_id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`) VALUES
 (1, 'hoodie', 'good', 1, 60, '2023-02-15 00:16:58', '2023-02-18 22:13:02', '2023-02-15 00:16:58', 5),
 (2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0);
 
@@ -116,7 +115,7 @@ INSERT INTO `product` (`product_id`, `name`, `description`, `inventory_id`, `pri
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE `konsta_user` (
   `user_id` int NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
@@ -133,39 +132,39 @@ CREATE TABLE `user` (
 --
 -- Indexes for table `cart_list`
 --
-ALTER TABLE `cart_list`
+ALTER TABLE `evgeny_cart_list`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `favourite_list`
 --
-ALTER TABLE `favourite_list`
+ALTER TABLE `fatemeh_favourite_list`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `feedback`
 --
-ALTER TABLE `feedback`
+ALTER TABLE `marika_feedback`
   ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `order`
 --
-ALTER TABLE `order`
+ALTER TABLE `fatemeh_order`
   ADD PRIMARY KEY (`order_nmb`);
 
 --
 -- Indexes for table `product`
 --
-ALTER TABLE `product`
+ALTER TABLE `fatemeh_product`
   ADD PRIMARY KEY (`product_id`);
 
 --
 -- Indexes for table `user`
 --
-ALTER TABLE `user`
+ALTER TABLE `konsta_user`
   ADD PRIMARY KEY (`user_id`);
 
 --
@@ -175,19 +174,19 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for table `order`
 --
-ALTER TABLE `order`
+ALTER TABLE `fatemeh_order`
   MODIFY `order_nmb` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
-ALTER TABLE `product`
+ALTER TABLE `fatemeh_product`
   MODIFY `product_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `user`
+ALTER TABLE `konsta_user`
   MODIFY `user_id` int NOT NULL AUTO_INCREMENT;
 
 --
@@ -197,21 +196,21 @@ ALTER TABLE `user`
 --
 -- Constraints for table `cart_list`
 --
-ALTER TABLE `cart_list`
+ALTER TABLE `evgeny_cart_list`
   ADD CONSTRAINT `cart_list_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   ADD CONSTRAINT `cart_list_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
 -- Constraints for table `favourite_list`
 --
-ALTER TABLE `favourite_list`
+ALTER TABLE `fatemeh_favourite_list`
   ADD CONSTRAINT `favourite_list_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   ADD CONSTRAINT `favourite_list_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
 -- Constraints for table `feedback`
 --
-ALTER TABLE `feedback`
+ALTER TABLE `marika_feedback`
   ADD CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
