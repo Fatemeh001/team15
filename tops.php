@@ -67,9 +67,22 @@ if (isset($_POST['unliked'])) {
                           <a href="404.php" class="add-to-cart">OUT OF STOCK</a>
                       </div>
                       <div class="product-content">
-                          <h3 class="title"><a href="405.php">Hoodie</a></h3>
-                          <div class="price">60.00€</div>
-                          <button onclick="addToFavoriteList(<?php echo $product_id; ?>" style="margin-top:8px;")>Add to favorite list</button>
+                      <?php
+$product_id = 1; 
+$result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=1");
+$row= mysqli_fetch_array($result);
+?>
+                      <?php echo $row['name']; ?>
+                          <div class="price" href="unlike.php">60.00€</div>
+                          <li class="nav-item">
+                          <span class="like-container">
+                          <?php
+        $result = mysqli_query($conn, "SELECT * FROM fatemeh_likes WHERE user_id = 1 AND product_id=1");
+        if(mysqli_num_rows($result) == 1){?>
+            <span> <a href="" class="unlike" id="<?php echo 1 ; ?>">unlike</a></span>
+        <?php } else { ?>
+            <span> <a href="" class="like" id="<?php echo 1  ?>">like</a></span>
+        <?php }?>
                       </div>
                   </div>
               </div>
