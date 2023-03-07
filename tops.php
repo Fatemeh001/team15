@@ -1,6 +1,32 @@
 <?php $title = "Cecile | Tops";
 include "header.php";
 ?>
+<?php
+include 'db.php';?>
+<?php
+if (isset($_POST['liked'])) {
+  $product_id = $_POST['product_id'];
+  $result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=$product_id");
+  $row= mysqli_fetch_array($result);
+  $n=$row['likes'];
+  $sql1 = "UPDATE fatemeh_product SET likes=$n+1 WHERE id=$product_id";
+  mysqli_query($conn,$sql1);
+  $sql2 = "INSERT INTO fatemeh_likes (user_id,product_id) VALUES(1,$product_id)";
+  mysqli_query($conn,$sql2);
+  exit();
+} 
+if (isset($_POST['unliked'])) {
+  $product_id = $_POST['product_id'];
+  $result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=$product_id");
+  $row= mysqli_fetch_array($result);
+  $n=$row['likes'];
+  $sql3 = "DELETE FROM fatemeh_likes WHERE product_id=$product_id AND user_id=1";
+  mysqli_query($conn,$sql3);
+  $sql1 = "UPDATE fatemeh_product SET likes=$n-1 WHERE id=$product_id";
+  mysqli_query($conn,$sql1);
+  exit();
+}
+?>
 
   <div class="container">
 
