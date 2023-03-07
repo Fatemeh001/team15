@@ -48,3 +48,21 @@ if (isset($_POST['unliked'])) {
               <div class="col-lg-4 col-md-6 col-sm-4" style="float: left;  margin-left: 100px;"  >
                   <div class="product-grid">
                       <div class="product-image">
+                      <a href="405.php" class="image">
+                              <img src="images/model2.2.png" alt="Hoodie">
+
+                          </a>
+                          <a href="404.php" class="add-to-cart">OUT OF STOCK</a>
+                         
+                      </div>
+                      <div class="product-content">
+                      <?php
+$product_id = 1; // The product ID you want to display
+$result = mysqli_query($conn,"SELECT * FROM product WHERE id=1");
+$row= mysqli_fetch_array($result);
+?>
+                      <?php echo $row['name']; ?>
+                          <div class="price" href="unlike.php">60.00€</div>
+                          <li class="nav-item">
+                          <span class="like-container">
+                          
