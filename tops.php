@@ -1,5 +1,6 @@
-<?php include "header.php";
-$title = "Cecile | Tops";?>
+<?php $title = "Cecile | Tops";
+include "header.php";
+?>
 
   <div class="container">
 

@@ -1,5 +1,5 @@
-<?php include "header.php";
-$title = "Cecile | Admin Login";?>
+<?php $title = "Cecile | Admin Login";
+include "header.php";?>
 
 <?php
 ob_start();
