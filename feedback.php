@@ -23,7 +23,7 @@ if (empty($_POST["email"])) {
     $emailErr = "Email is required";
   } else {
     $email = $_POST["email"];
-    // check if e-mail address is well-formed
+    // check if e-mail address valid (has "@" and ".")
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $emailErr = "Invalid email format";
     }
@@ -42,27 +42,7 @@ if (empty($_POST["email"])) {
   }
 }
 
-if (isset($_POST['submit'])) {
-    $email = $_POST['email'];
-    $rating = $_POST['rating'];
-    $feedbackText = $_POST['feedbackText'];
-
-    include 'db.php';
-    $sql="insert into feedbackNew (email, rating, feedbackText)
-    values('$email', '$rating', '$feedbackText')";
-
-    if($conn -> query($sql) === TRUE) {
-        echo "Thank you for your feedback!";}
-    else {
-      echo "Error: " . $sql . "<br>" . $conn -> $error;}
-
-    $conn -> close();
-}
-
 ?>
-    
-    <!-- Make system ask user for their login and then submit feedback-->
-    <!-- if (user is loged in) {they can submit feedback}-->
 
     <div class="feedback-form">
     <h2> Submit your feedback </h2>
@@ -94,7 +74,26 @@ if (isset($_POST['submit'])) {
             rows="4" cols="50" value="Do you have any suggestions to improve our product and service?">
             </textarea><br>
             
-            <input type="submit" value="Send" name="submit">
+            <input type="submit" value="Send" name="submit"><br><br>
+
+            <?php
+            if (isset($_POST['submit'])) {
+              $email = $_POST['email'];
+              $rating = $_POST['rating'];
+              $feedbackText = $_POST['feedbackText'];
+          
+              include 'db.php';
+              $sql="insert into marika_feedback (email, rating, feedbackText)
+              values('$email', '$rating', '$feedbackText')";
+          
+              if($conn -> query($sql) === TRUE) {
+                  echo "Thank you for your feedback!";}
+              else {
+                echo "Error: " . $sql . "<br>" . $conn -> $error;}
+          
+              $conn -> close();
+          }
+            ?>
 
         </form>
 

@@ -12,7 +12,7 @@ include 'db.php';?>
     </style>
 
 <?php
-$sql = "select * from feedbackNew";
+$sql = "select * from marika_feedback";
 $result = $conn -> query($sql);
 
 if ($result -> num_rows > 0) {
