@@ -133,4 +133,27 @@ $row= mysqli_fetch_array($result);
                     'liked':1,
                     'product_id': product_id
                 },
+                success:function(){
+                }
+            });
+        });
+
+        //when the user click on unlike
+        $('.unlike').click(function(){
+            var product_id = $(this).attr('id');
+            $.ajax({
+                url: 'index.php',
+                type: 'post',
+                async: false,
+                data:{
+                    'unliked':1,
+                    'product_id': product_id
+                },
+                success:function(){
+                   
+                }
+            });
+        });
+    });
+</script>
                         
