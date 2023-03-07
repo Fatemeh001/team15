@@ -72,3 +72,20 @@ $row= mysqli_fetch_array($result);
         <?php } else { ?>
             <span> <a href="" class="like" id="<?php echo 1  ?>">like</a></span>
         <?php }?>
+        </li></dive>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-4" style="float: right;  margin-right: 100px;" >
+              
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="405.php" class="image">
+
+                            
+
+                            <img src="images/model4.3.png" alt="Sweater">
+
+                        </a>
+                        
