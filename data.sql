@@ -244,3 +244,56 @@ INSERT INTO `konsta_adminusers` (`userid`, `password`) VALUES
 ALTER TABLE `konsta_adminusers`
   ADD PRIMARY KEY (`userid`);
 COMMIT;
+
+
+
+
+- Table structure for table `fatemeh-likes`
+--
+
+CREATE TABLE `fatemeh-likes` (
+  `id` int NOT NULL,
+  `user_id` int NOT NULL,
+  `product_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `likes`
+--
+ALTER TABLE `fatemeh-likes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `likes`
+--
+ALTER TABLE `fatemeh-likes`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `likes`
+--
+ALTER TABLE `fatemeh-likes`
+  ADD CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
