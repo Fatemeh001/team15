@@ -218,3 +218,30 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+-- Rakenne taululle `konsta_adminusers`
+--
+
+CREATE TABLE `konsta_adminusers` (
+  `userid` int NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Vedos taulusta `konsta_adminusers`
+--
+
+INSERT INTO `konsta_adminusers` (`userid`, `password`) VALUES
+(130399, 'test1');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `konsta_adminusers`
+--
+ALTER TABLE `konsta_adminusers`
+  ADD PRIMARY KEY (`userid`);
+COMMIT;
