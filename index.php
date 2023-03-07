@@ -1,6 +1,7 @@
-<?php include "header.php";
+<?php $title = "Cecile | Home";
+include "header.php";
 
-$title = "Cecile | Home";?>
+?>
 <?php
 include 'db.php';?>
 <?php

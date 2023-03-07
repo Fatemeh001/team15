@@ -1,5 +1,7 @@
-<?php include "header.php";
-$title = "Cecile | Thanks for the feedback!";?>
+<?php $title = "Cecile | Thanks for the feedback!";
+include "header.php";
+?>
+
 <style>
     .thank-you-for-the-feedback{
     margin: 0 auto;
