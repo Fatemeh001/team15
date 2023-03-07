@@ -77,16 +77,17 @@ CREATE TABLE `fatemeh_product` (
   `created_at` timestamp NOT NULL,
   `modified_at` timestamp NOT NULL,
   `deleted_at` timestamp NOT NULL,
-  `quantity` int NOT NULL
+  `quantity` int NOT NULL,
+  `likes` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `fatemeh_product`
 --
 
-INSERT INTO `fatemeh_product` (`id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`) VALUES
-(1, 'hoodie', 'good', 1, 60, '2023-02-15 00:16:58', '2023-02-18 22:13:02', '2023-02-15 00:16:58', 5),
-(2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0);
+INSERT INTO `fatemeh_product` (`id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`, `likes`) VALUES
+(1, 'hoodie', 'good', 1, 60, '2023-02-15 00:16:58', '2023-02-18 22:13:02', '2023-02-15 00:16:58', 5, 125),
+(2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0, 73);
 
 -- --------------------------------------------------------
 
