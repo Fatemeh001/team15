@@ -5,7 +5,7 @@ $title = "Cecile | Login";
 
 
 <section class="signup-form">
-    <h2> Log in </h2>
+    <h2> Log in</h2>
 
     <div class="signup-form" >
         <form action="includes\login.inc.php" method="post">
