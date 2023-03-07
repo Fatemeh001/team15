@@ -130,7 +130,7 @@ CREATE TABLE `konsta_user` (
 --
 
 --
--- Indexes for table `cart_list`
+-- Indexes for table `evgeny_cart_list`
 --
 ALTER TABLE `evgeny_cart_list`
   ADD KEY `user_id` (`user_id`),
