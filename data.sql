@@ -52,14 +52,22 @@ CREATE TABLE `favourite_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedback`
+-- Table structure for table `feedbackNew`
 --
 
-CREATE TABLE `feedback` (
-  `user_id` int NOT NULL,
+CREATE TABLE `marika_feedback` (
   `email` varchar(50) NOT NULL,
-  `feedbackText` varchar(1000) NOT NULL
+  `rating` int NOT NULL,
+  `feedbackText` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `marika_feedback`
+--
+
+INSERT INTO `marika_feedback` (`email`, `rating`, `feedbackText`) VALUES
+('awdaw@gmail.com', 5, 'Text'),
+('knsefn@mail.com', 4, 'Good!!!!');
 
 -- --------------------------------------------------------
 
