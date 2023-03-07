@@ -12,7 +12,7 @@ if (isset($_POST['liked'])) {
   $n=$row['likes'];
   $sql1 = "UPDATE fatemeh_product SET likes=$n+1 WHERE id=$product_id";
   mysqli_query($conn,$sql1);
-  $sql2 = "INSERT INTO fatemeh-likes(user_id,product_id) VALUES(1,$product_id)";
+  $sql2 = "INSERT INTO fatemeh-likes (user_id,product_id) VALUES(1,$product_id)";
   mysqli_query($conn,$sql2);
   exit();
 } 
