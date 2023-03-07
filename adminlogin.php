@@ -5,6 +5,8 @@
 
 
 
+
+
 <html lang = "en">
    
    <head>
@@ -87,8 +89,11 @@
                   $_SESSION['valid'] = true;
                   $_SESSION['timeout'] = time();
                   $_SESSION['username'] = 'Cecile';
+
+                  header("Location: adminpage.php");
+                  exit;
                   
-                  echo 'Welcome admin (Fancy admin panel here)';
+                  
                }else {
                   $msg = 'Wrong username or password';
                }
@@ -114,6 +119,9 @@
          
          
       </div> 
+
+      
       
    </body>
 </html>
+
