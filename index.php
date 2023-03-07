@@ -7,23 +7,23 @@ include 'db.php';?>
 <?php
 if (isset($_POST['liked'])) {
   $product_id = $_POST['product_id'];
-  $result = mysqli_query($conn,"SELECT * FROM product WHERE id=$product_id");
+  $result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=$product_id");
   $row= mysqli_fetch_array($result);
   $n=$row['likes'];
-  $sql1 = "UPDATE product SET likes=$n+1 WHERE id=$product_id";
+  $sql1 = "UPDATE fatemeh_product SET likes=$n+1 WHERE id=$product_id";
   mysqli_query($conn,$sql1);
-  $sql2 = "INSERT INTO likes(user_id,product_id) VALUES(1,$product_id)";
+  $sql2 = "INSERT INTO fatemeh-likes(user_id,product_id) VALUES(1,$product_id)";
   mysqli_query($conn,$sql2);
   exit();
 } 
 if (isset($_POST['unliked'])) {
   $product_id = $_POST['product_id'];
-  $result = mysqli_query($conn,"SELECT * FROM product WHERE id=$product_id");
+  $result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=$product_id");
   $row= mysqli_fetch_array($result);
   $n=$row['likes'];
-  $sql3 = "DELETE FROM likes WHERE product_id=$product_id AND user_id=1";
+  $sql3 = "DELETE FROM fatemeh-likes WHERE product_id=$product_id AND user_id=1";
   mysqli_query($conn,$sql3);
-  $sql1 = "UPDATE product SET likes=$n-1 WHERE id=$product_id";
+  $sql1 = "UPDATE fatemeh_product SET likes=$n-1 WHERE id=$product_id";
   mysqli_query($conn,$sql1);
   exit();
 }
@@ -58,8 +58,8 @@ if (isset($_POST['unliked'])) {
                       </div>
                       <div class="product-content">
                       <?php
-$product_id = 1; // The product ID you want to display
-$result = mysqli_query($conn,"SELECT * FROM product WHERE id=1");
+$product_id = 1; 
+$result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=1");
 $row= mysqli_fetch_array($result);
 ?>
                       <?php echo $row['name']; ?>
@@ -67,7 +67,7 @@ $row= mysqli_fetch_array($result);
                           <li class="nav-item">
                           <span class="like-container">
                           <?php
-        $result = mysqli_query($conn, "SELECT * FROM likes WHERE user_id = 1 AND product_id=1");
+        $result = mysqli_query($conn, "SELECT * FROM fatemeh-likes WHERE user_id = 1 AND product_id=1");
         if(mysqli_num_rows($result) == 1){?>
             <span> <a href="" class="unlike" id="<?php echo 1 ; ?>">unlike</a></span>
         <?php } else { ?>
@@ -93,8 +93,8 @@ $row= mysqli_fetch_array($result);
                     </div>
                     <div class="product-content">
                     <?php
-$product_id = 2; // The product ID you want to display
-$result = mysqli_query($conn,"SELECT * FROM product WHERE id=2");
+$product_id = 2; 
+$result = mysqli_query($conn,"SELECT * FROM fatemeh_product WHERE id=2");
 $row= mysqli_fetch_array($result);
 ?>
                       <?php echo $row['name']; ?>
@@ -102,7 +102,7 @@ $row= mysqli_fetch_array($result);
                         <li class="nav-item">
                          <span class="like-container">
                          <?php
-        $result = mysqli_query($conn, "SELECT * FROM likes WHERE user_id = 1 AND product_id=2");
+        $result = mysqli_query($conn, "SELECT * FROM fatemeh-likes WHERE user_id = 1 AND product_id=2");
         if(mysqli_num_rows($result) == 1){?>
             <span> <a href="" class="unlike" id="<?php echo 2 ; ?>">unlike</a></span>
         <?php } else { ?>
