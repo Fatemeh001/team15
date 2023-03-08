@@ -76,12 +76,13 @@ $row= mysqli_fetch_array($result);
                           <div class="price" href="unlike.php">60.00€</div>
                           <li class="nav-item">
                           <span class="like-container">
-                          <?php
+                          <?php 
         $result = mysqli_query($conn, "SELECT * FROM fatemeh_likes WHERE user_id = 1 AND product_id=1");
         if(mysqli_num_rows($result) == 1){?>
-            <span> <a href="" class="unlike" id="<?php echo 1 ; ?>">unlike</a></span>
+        
+            <button > <a href="" class="unlike" id="<?php echo 1 ; ?>">unlike</a></button>
         <?php } else { ?>
-            <span> <a href="" class="like" id="<?php echo 1  ?>">like</a></span>
+            <button> <a href="" class="like" id="<?php echo 1  ?>">like</a></button>
         <?php }?>
                       </div>
                   </div>
@@ -113,9 +114,9 @@ $row= mysqli_fetch_array($result);
                          <?php
                       $result = mysqli_query($conn, "SELECT * FROM fatemeh_likes WHERE user_id = 1 AND product_id=2");
                       if(mysqli_num_rows($result) == 1){?>
-                    <span> <a href="" class="unlike" id="<?php echo 2 ; ?>">unlike</a></span>
+                    <button type=""> <a href="" class="unlike"  id="<?php echo 2 ; ?>">unlike</a></button>
                     <?php } else { ?>
-                   <span> <a href="" class="like" id="<?php echo 2  ?>">like</a></span>
+                   <button> <a href="" class="like"  style=""  id="<?php echo 2  ?>">like</a></button>
                 <?php }?>
                         
                     </div>
