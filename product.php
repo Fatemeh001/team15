@@ -4,6 +4,7 @@ include "header.php";
 <?php
 include 'db.php';
 if (isset($_POST['add_product'])) {
+    
     $name = $_POST['name'];
     $description = $_POST['description'];
     $inventory_id = $_POST['inventory_id'];
@@ -12,10 +13,9 @@ if (isset($_POST['add_product'])) {
     $modified_at = date("Y-m-d H:i:s");
     $deleted_at = date("Y-m-d H:i:s");
     $quantity = $_POST['quantity'];
-    $likes = $_POST['likes'];
 
     
-    $sql = "INSERT INTO fatemeh_product (name, description, inventory_id, price, created_at, modified_at, deleted_at, quantity,likes) VALUES ('$name', '$description', $inventory_id, $price, '$created_at', '$modified_at', '$deleted_at', $quantity,0)";
+    $sql = "INSERT INTO fatemeh_product (name, description, inventory_id, price, created_at, modified_at, deleted_at, quantity, likes) VALUES ('$name', '$description', $inventory_id, $price, '$created_at', '$modified_at', '$deleted_at', $quantity,0)";
     if (mysqli_query($conn, $sql)) {
         echo "Product added successfully.";
     } else {
@@ -29,18 +29,13 @@ mysqli_close($conn);
 ?>
 
 
-<form method="POST" action="">
-  <label>Name:</label>
-  <input type="text" name="name" required><br>
-  <label>Description:</label>
-  <textarea name="description" required></textarea><br>
-  <label>Inventory ID:</label>
-  <input type="text" name="inventory_id" required><br>
-  <label>Price:</label>
-  <input type="number" name="price" required><br>
-  <label>Quantity:</label>
-  <input type="number" name="quantity" required><br>
-  <button type="submit">Add Product</button>
+<form action="" method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="description" placeholder="Description"><br><br>
+    <input type="number" name="inventory_id" placeholder="Inventory ID">
+    <input type="number" name="price" placeholder="Price"><br><br>
+    <input type="number" name="quantity" placeholder="Quantity">
+    <input type="submit" name="add_product" value="Add Product">
 </form>
 
 <?php
