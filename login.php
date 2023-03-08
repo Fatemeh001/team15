@@ -1,5 +1,6 @@
-<?php include "header.php";
-$title = "Cecile | Login";
+<?php $title = "Cecile | Login";
+include "header.php";
+;
 ?>
 
 
