@@ -4,20 +4,75 @@ include 'db.php';
 $title = "Cecile | Feedback";?>
 
 <style>
-    .feedback-form{
-    margin: 0 auto;
-    margin-left: 500px;
-    text-align: left;
-    padding-bottom: 20px;
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.feedback-form{
+  margin: auto;
+  width: 640px; 
+  padding: 50px;
+  text-align: left;
+  padding-bottom: 20px;
+  }
+
+  input[type=submit] {
+  background-color: rgb(251, 131, 120);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 2px;
+  }
+
+  input[type=submit]:hover {
+  background-color: rgb(236, 99, 86);
+  }
+
+  input[type=submit]:active {
+  background-color: rgb(236, 99, 86);
+  }
+
+  @media screen and (max-width: 600px) {
+    .feedback-form {
+      font-size: 20px;
+      width: 100%;
+  }
+
+    .rating-form {
+      font-size: 24px;
+      width: 100%;
     }
+
+    input[type=radio] {
+      border: 0px;
+      width: 100%;
+      height: 30px;
+}
+
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .text-area {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  
+}
 </style>
 
-
 <section class="submit-feedback">
-
 <?php
 $ratingErr = $emailErr = "";
 $email = $feedbackText = "";
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (empty($_POST["email"])) {
     $emailErr = "Email is required";
@@ -46,12 +101,12 @@ if (empty($_POST["email"])) {
 
     <div class="feedback-form">
     <h2> Submit your feedback </h2>
-    <p><span class="error">* required field</span></p>
+    <p style="color: rgb(225, 63, 52)"><span class="error" >* required field</span></p>
 
         <form method="post" action="">
             
         E-mail: <input type="text" name="email" required value="<?php echo $email;?>">
-        <span class="error">* <?php echo $emailErr;?></span><br>
+        <span style="color: rgb(225, 63, 52)" class="error">* <?php echo $emailErr;?></span><br>
 
             <h3>How satisfied are you with the buying process?</h3>
             <p> 5 = Highly satisfied</p>
@@ -60,19 +115,21 @@ if (empty($_POST["email"])) {
             <p> 2 = Dissatisfied</p>
             <p> 1 = Highly dissatisfied</p>
 
+            <div class=rating-form>
             <input type="radio" name="rating" <?php if (isset($rating) && $rating=="5") echo "checked";?>value="5">5
             <input type="radio" name="rating" <?php if (isset($rating) && $rating=="4") echo "checked";?> value="4">4
             <input type="radio" name="rating" <?php if (isset($rating) && $rating=="3") echo "checked";?> value="3">3
             <input type="radio" name="rating" <?php if (isset($rating) && $rating=="2") echo "checked";?> value="2">2  
             <input type="radio" name="rating" <?php if (isset($rating) && $rating=="1") echo "checked";?> value="1">1  
-            <span class="error">* <?php echo $ratingErr;?></span><br>
+            <span style="color: rgb(225, 63, 52)" class="error">* <?php echo $ratingErr;?></span><br><br>
+            </div>
 
+            <h3>Do you have any suggestions to improve our products and service?</h3><br>
 
-            <h3>Do you have any suggestions to improve our products and service?</h3>
-
+            <div class=text-area>
             <textarea maxlength="1000" name="feedbackText" placeholder="Feedback" 
-            rows="4" cols="50" value="Do you have any suggestions to improve our product and service?">
-            </textarea><br>
+            rows="4" cols="50" value="Do you have any suggestions to improve our product and service?"></textarea><br>
+            </div>
             
             <input type="submit" value="Send" name="submit"><br><br>
 
@@ -104,8 +161,6 @@ if (empty($_POST["email"])) {
           };
           }
         </script>
-
-
     </div>
 </section>    
 
