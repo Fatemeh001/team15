@@ -71,7 +71,7 @@ if (isset($_POST['unliked'])) {
                       ?>
                       <?php echo $row['name']; ?>
                         <div class="price" href="unlike.php">49.00€ <span>70.00€</span></div>
-                        <li class="nav-item">
+                      
                          <span class="like-container">
                          <?php 
         $result = mysqli_query($conn, "SELECT * FROM fatemeh_likes WHERE user_id = 1 AND product_id=1");
