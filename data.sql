@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 07, 2023 at 12:44 PM
+-- Generation Time: Mar 08, 2023 at 07:02 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.0.19
 
@@ -38,10 +38,10 @@ CREATE TABLE `evgeny_cart_list` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fatemeh-likes`
+-- Table structure for table `fatemeh_likes`
 --
 
-CREATE TABLE `fatemeh-likes` (
+CREATE TABLE `fatemeh_likes` (
   `product_id` int NOT NULL,
   `user_id` int NOT NULL,
   `id` int NOT NULL
@@ -86,8 +86,8 @@ CREATE TABLE `fatemeh_product` (
 --
 
 INSERT INTO `fatemeh_product` (`id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`, `likes`) VALUES
-(1, 'hoodie', 'good', 1, 60, '2023-02-15 00:16:58', '2023-02-18 22:13:02', '2023-02-15 00:16:58', 5, 125),
-(2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0, 73);
+(1, 'hoodie', 'good', 1, 60, '2023-02-15 00:16:58', '2023-02-18 22:13:02', '2023-02-15 00:16:58', 5, 0),
+(2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -122,8 +122,10 @@ CREATE TABLE `marika_feedback` (
 --
 
 INSERT INTO `marika_feedback` (`email`, `rating`, `feedbackText`) VALUES
-('awdaw@gmail.com', 5, 'Text'),
-('knsefn@mail.com', 4, 'Good!!!!');
+('joe.doe@mail.com', 5, 'Good!!!'),
+('joe.doe@mail.com', 5, 'Very good!'),
+('test@gmail.com', 4, 'Great thank you!'),
+('jane.doe@mail.com', 5, '');
 
 --
 -- Indexes for dumped tables
@@ -137,20 +139,26 @@ ALTER TABLE `evgeny_cart_list`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `fatemeh-likes`
+-- Indexes for table `fatemeh_likes`
 --
-ALTER TABLE `fatemeh-likes`
+ALTER TABLE `fatemeh_likes`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `product_id` (`product_id`,`user_id`);
+
+--
+-- Indexes for table `marika_feedback`
+--
+ALTER TABLE `marika_feedback`
+  ADD KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `fatemeh-likes`
+-- AUTO_INCREMENT for table `fatemeh_likes`
 --
-ALTER TABLE `fatemeh-likes`
+ALTER TABLE `fatemeh_likes`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
