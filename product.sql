@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Mar 07, 2023 at 01:08 PM
+-- Generation Time: Mar 08, 2023 at 07:37 PM
 -- Server version: 8.0.31
 -- PHP Version: 8.0.19
 
@@ -18,16 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `team`
+-- Database: `team15`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- Table structure for table `fatemeh_product`
 --
 
-CREATE TABLE `product` (
+CREATE TABLE `fatemeh_product` (
   `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `description` varchar(200) NOT NULL,
@@ -41,21 +41,21 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `product`
+-- Dumping data for table `fatemeh_product`
 --
 
-INSERT INTO `product` (`id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`, `likes`) VALUES
-(1, 'hoodie', 'good', 1, 60, '2023-02-28 19:30:54', '2023-02-28 19:30:54', '2023-02-28 19:30:54', 0, 125),
-(2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0, 73);
+INSERT INTO `fatemeh_product` (`id`, `name`, `description`, `inventory_id`, `price`, `created_at`, `modified_at`, `deleted_at`, `quantity`, `likes`) VALUES
+(1, 'hoodie', 'good', 1, 60, '2023-02-15 00:16:58', '2023-02-18 22:13:02', '2023-02-15 00:16:58', 5, 1),
+(2, 'sweater', '30% off', 2, 49, '2023-02-15 00:18:27', '2023-02-15 00:18:27', '2023-02-15 00:18:27', 0, 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `product`
+-- Indexes for table `fatemeh_product`
 --
-ALTER TABLE `product`
+ALTER TABLE `fatemeh_product`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -63,10 +63,10 @@ ALTER TABLE `product`
 --
 
 --
--- AUTO_INCREMENT for table `product`
+-- AUTO_INCREMENT for table `fatemeh_product`
 --
-ALTER TABLE `product`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `fatemeh_product`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

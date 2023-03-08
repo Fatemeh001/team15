@@ -12,9 +12,10 @@ if (isset($_POST['add_product'])) {
     $modified_at = date("Y-m-d H:i:s");
     $deleted_at = date("Y-m-d H:i:s");
     $quantity = $_POST['quantity'];
+    $likes = $_POST['likes'];
 
     
-    $sql = "INSERT INTO fatemeh_product (name, description, inventory_id, price, created_at, modified_at, deleted_at, quantity) VALUES ('$name', '$description', $inventory_id, $price, '$created_at', '$modified_at', '$deleted_at', $quantity)";
+    $sql = "INSERT INTO fatemeh_product (name, description, inventory_id, price, created_at, modified_at, deleted_at, quantity,likes) VALUES ('$name', '$description', $inventory_id, $price, '$created_at', '$modified_at', '$deleted_at', $quantity,0)";
     if (mysqli_query($conn, $sql)) {
         echo "Product added successfully.";
     } else {
