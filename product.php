@@ -29,13 +29,18 @@ mysqli_close($conn);
 ?>
 
 
-<form action="" method="post">
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="description" placeholder="Description"><br><br>
-    <input type="text" name="inventory_id" placeholder="Inventory ID">
-    <input type="text" name="price" placeholder="Price"><br><br>
-    <input type="text" name="quantity" placeholder="Quantity">
-    <input type="submit" name="add_product" value="Add Product">
+<form method="POST" action="">
+  <label>Name:</label>
+  <input type="text" name="name" required><br>
+  <label>Description:</label>
+  <textarea name="description" required></textarea><br>
+  <label>Inventory ID:</label>
+  <input type="text" name="inventory_id" required><br>
+  <label>Price:</label>
+  <input type="number" name="price" required><br>
+  <label>Quantity:</label>
+  <input type="number" name="quantity" required><br>
+  <button type="submit">Add Product</button>
 </form>
 
 <?php
