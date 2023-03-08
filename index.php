@@ -28,6 +28,7 @@ if (isset($_POST['unliked'])) {
   exit();
 }
 ?>
+
 <link rel="stylesheet" href="styles.css">
 <div class="container">
 <div class="p-5 text-center bg-image rounded-3" style="background-image: url('images/banner2.jpg');height: 600px;  background-repeat: no-repeat;">
@@ -56,7 +57,9 @@ if (isset($_POST['unliked'])) {
                           <a href="404.php" class="add-to-cart">OUT OF STOCK</a>
                          
                       </div>
+
                       <div class="product-content">
+                        
                        
                       <?php
                     $product_id = 1; 
@@ -126,6 +129,7 @@ if (isset($_POST['unliked'])) {
           
 </div>
 
+
 <script type="text/javascript" src="min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -162,6 +166,7 @@ if (isset($_POST['unliked'])) {
         });
     });
 </script>
+
 
 <?php include "footer.php" ?>
                         

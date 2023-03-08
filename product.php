@@ -4,7 +4,6 @@ include "header.php";
 <?php
 include 'db.php';
 if (isset($_POST['add_product'])) {
-    $product_id = $_POST['product_id'];
     $name = $_POST['name'];
     $description = $_POST['description'];
     $inventory_id = $_POST['inventory_id'];
@@ -15,7 +14,7 @@ if (isset($_POST['add_product'])) {
     $quantity = $_POST['quantity'];
 
     
-    $sql = "INSERT INTO product (name, description, inventory_id, price, created_at, modified_at, deleted_at, quantity) VALUES ('$name', '$description', $inventory_id, $price, '$created_at', '$modified_at', '$deleted_at', $quantity)";
+    $sql = "INSERT INTO fatemeh_product (name, description, inventory_id, price, created_at, modified_at, deleted_at, quantity) VALUES ('$name', '$description', $inventory_id, $price, '$created_at', '$modified_at', '$deleted_at', $quantity)";
     if (mysqli_query($conn, $sql)) {
         echo "Product added successfully.";
     } else {
