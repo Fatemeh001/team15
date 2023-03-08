@@ -73,14 +73,14 @@ if (isset($_POST['unliked'])) {
                         <div class="price" href="unlike.php">49.00€ <span>70.00€</span></div>
                       
                          <span class="like-container">
-                         <?php 
-        $result = mysqli_query($conn, "SELECT * FROM fatemeh_likes WHERE user_id = 1 AND product_id=1");
-        if(mysqli_num_rows($result) == 1){?>
-        
-            <button > <a href="" class="unlike" id="<?php echo 1 ; ?>">unlike</a></button>
-        <?php } else { ?>
-            <button> <a href="" class="like" id="<?php echo 1  ?>">like</a></button>
-        <?php }?>
+                         <?php
+                      $result = mysqli_query($conn, "SELECT * FROM fatemeh_likes WHERE user_id = 1 AND product_id=2");
+                      if(mysqli_num_rows($result) == 1){?>
+                    <button type=""> <a href="" class="unlike"  id="<?php echo 2 ; ?>">unlike</a></button>
+                    <?php } else { ?>
+                   <button> <a href="" class="like"  style=""  id="<?php echo 2  ?>">like</a></button>
+                <?php }?>
+                        
         </div>
     
 </div>
