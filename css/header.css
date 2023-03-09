@@ -6,13 +6,15 @@
 @import url(footer.css);
 @import url(checkout.css);
 @import url(item.css);
-
+@import url(owl.carousel.css);
+@import url(font-awesome.min.css);
+@import url(nice-select.css);
 
 
 header {
     background-color: #f8d4c6;
     margin-top: -16px;
-   
+    padding-top: 15px;   
 }
 
 .header_area .classy-nav-container .classy-navbar-toggler {

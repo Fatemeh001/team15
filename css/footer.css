@@ -1,11 +1,8 @@
 footer {
-    margin-bottom: -40px;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 1px;   
+    padding-top: 5px;
+    padding-bottom: 1px;
+    margin-bottom: -45px;
     background-color: #f8d4c6;
-    text-align: center ;
-    align-items: center;
   }
   
   .footer-widget .container {
