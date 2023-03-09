@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="icon" href="images/1.png" type="image/x-icon">
-
-
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -130,10 +130,6 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <script src="js/active.js"></script>
-    <script src="js/jquery/jquery.js"></script>
-	  <script src="js/bootstrap.min.js"></script>
 
   <div class="container">
     <div class="row breadcrumbs">
