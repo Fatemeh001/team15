@@ -25,12 +25,12 @@ mysqli_close($conn);
 ?>
 
 <form action="" method="post" style="margin-left:35px ;">
-    <input type="text" name="id" placeholder="Product ID">
+    <input type="number" name="id" placeholder="Product ID">
     <input type="text" name="name" placeholder="Name">
     <input type="text" name="description" placeholder="Description"><br><br>
-    <input type="text" name="inventory_id" placeholder="Inventory ID">
-    <input type="text" name="price" placeholder="Price"><br><br>
-    <input type="text" name="quantity" placeholder="Quantity">
+    <input type="number" name="inventory_id" placeholder="Inventory ID">
+    <input type="number" name="price" placeholder="Price"><br><br>
+    <input type="number" name="quantity" placeholder="Quantity">
     <input type="submit" name="update_product" value="Update Product">
 </form>
 <?php
