@@ -148,7 +148,7 @@ if (isset($_POST['unliked'])) {
             });
         });
 
-        //when the user click on unlike
+        
         $('.unlike').click(function(){
             var product_id = $(this).attr('id');
             $.ajax({
