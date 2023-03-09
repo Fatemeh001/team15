@@ -3,6 +3,7 @@ include "header.php";
 ?>
 <?php
 include 'db.php';
+
 if (isset($_POST['add_product'])) {
     
     $name = $_POST['name'];
