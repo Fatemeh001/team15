@@ -2,7 +2,13 @@
 include "header.php";
 ?>
 <?php
+
+
 include 'db.php';
+$result = mysqli_query($conn,"select * from fatemeh_product 
+where id= 'id'");
+$row =mysqli_fetch_array($result);
+
 
 if (isset($_POST['update_product'])) {
     $id = $_POST['id'];
@@ -25,7 +31,12 @@ mysqli_close($conn);
 ?>
 
 <form action="" method="post" style="margin-left:35px ;">
-    <input type="number" name="id" placeholder="Product ID">
+  
+    <select  type="number" name="id" value = "<?php echo $row['id'];?>" placeholder="Product ID">
+            <option value=1>ID:1 (Hoodie) </option>
+            <option value=2> ID:2 (Sweater) </option>
+        </select><br><br>
+
     <input type="text" name="name" placeholder="Name">
     <input type="text" name="description" placeholder="Description"><br><br>
     <input type="number" name="inventory_id" placeholder="Inventory ID">
