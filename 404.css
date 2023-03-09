@@ -1,0 +1,37 @@
+.logo-404 img{
+    margin-top: 30px;
+    height: 50px;
+    width: auto;
+  }
+  
+  .content-404 h1 {
+    color: #363432;
+    font-family: 'Roboto', sans-serif;
+    font-size: 41px;
+    font-weight: 300;
+  }
+  
+  .content-404 img {
+   margin:0 auto;
+   height: 200px;
+   width: auto;
+  }
+  
+  .content-404 p {
+    color: #363432;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+  
+  .content-404  h2 {
+    margin-top:50px;
+  }
+  
+  .content-404 h2 a {
+    background: #ffe9e1;
+    color: #ad5a4b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    padding: 8px 40px;
+  }
